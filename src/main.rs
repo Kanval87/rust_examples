@@ -7,6 +7,7 @@ mod testing_traits;
 extern crate text_io;
 
 use testing_custom_iterator::show_iterator_example;
+use testing_generics::show_generic_example;
 use testing_operator_overload_struct::add_operator_on_struct;
 use testing_traits::trait_impl_demo;
 
@@ -26,6 +27,7 @@ fn main() {
         4. Traits
         5. Operator overload on struct
         6. custom iterator
+        7. Generics example
         "
     );
     scan!("{}", scn);
@@ -37,8 +39,13 @@ fn main() {
         4 => run_trait_example(),
         5 => run_operator_overload_struct_example(),
         6 => run_custom_iterator_example(),
+        7 => run_generics_example(),
         _ => println!("Nothing to process"),
     }
+}
+
+fn run_generics_example() {
+    show_generic_example()
 }
 
 fn run_custom_iterator_example() {
