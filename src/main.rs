@@ -4,14 +4,14 @@ mod testing_generics;
 mod testing_operator_overload_struct;
 mod testing_structs;
 mod testing_traits;
-mod closure_box_iterator;
+mod testing_closure_box_iterator;
 extern crate text_io;
 
 use testing_custom_iterator::show_iterator_example;
 use testing_generics::show_generic_example;
 use testing_operator_overload_struct::add_operator_on_struct;
 use testing_traits::trait_impl_demo;
-use closure_box_iterator::show_closure_box_iterator;
+use testing_closure_box_iterator::show_closure_box_iterator;
 
 use crate::testing_enum::UnitOperation;
 use crate::testing_enum::Units;
