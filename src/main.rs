@@ -4,12 +4,14 @@ mod testing_generics;
 mod testing_operator_overload_struct;
 mod testing_structs;
 mod testing_traits;
+mod closure_box_iterator;
 extern crate text_io;
 
 use testing_custom_iterator::show_iterator_example;
 use testing_generics::show_generic_example;
 use testing_operator_overload_struct::add_operator_on_struct;
 use testing_traits::trait_impl_demo;
+use closure_box_iterator::show_closure_box_iterator;
 
 use crate::testing_enum::UnitOperation;
 use crate::testing_enum::Units;
@@ -28,6 +30,7 @@ fn main() {
         5. Operator overload on struct
         6. custom iterator
         7. Generics example
+        8. Closure , Box and iterator
         "
     );
     scan!("{}", scn);
@@ -40,8 +43,13 @@ fn main() {
         5 => run_operator_overload_struct_example(),
         6 => run_custom_iterator_example(),
         7 => run_generics_example(),
+        8 => run_closure_box_iterator_exmpl(),
         _ => println!("Nothing to process"),
     }
+}
+
+fn run_closure_box_iterator_exmpl() {
+    show_closure_box_iterator()
 }
 
 fn run_generics_example() {
